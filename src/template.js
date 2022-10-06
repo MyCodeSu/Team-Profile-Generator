@@ -1,4 +1,4 @@
-// boiler plate
+d// boiler plate
 const boilerPlate = data => {
     return `
         < !DOCTYPE html >
@@ -19,16 +19,17 @@ const boilerPlate = data => {
 const manager = managerData => {
     return `
     <div id=${managerData.getRole()}-card" class="employee_display">
-    <div class="box position_title manager_name">
-        <h2>${managerData.getName()}</h2>
-        <h3>Role: ${managerData.getRole()}</h3>
-    </div>
-    <div class="box employee_info">
-        <ul class="list">
-            <li class="list_item">ID: ${managerData.getId()}</li>
-            <li class="list_item">Email: ${managerData.getEmail()}</li>
-            <li class="list_item">Office Number: ${managerData.getOfficeNumber()}</li>
-        </ul>
+        <div class="box position_title manager_name">
+            <h2>${managerData.getName()}</h2>
+            <h3>Role: ${managerData.getRole()}</h3>
+        </div>
+        <div class="box employee_info">
+            <ul class="list">
+                <li class="list_item">ID: ${managerData.getId()}</li>
+                <li class="list_item">Email: <a href="mailto:${managerData.getEmail()}">${managerData.getEmail()}</a>></a></li>
+                <li class="list_item">Office Number: ${managerData.getOfficeNumber()}</li>
+            </ul>
+        </div>
     </div>
     `
 }
@@ -44,8 +45,27 @@ const engineer = engineerData => {
         <div class="box employee_info">
             <ul class="list">
                 <li class="list_item">ID: ${engineerData.getId()}</li>
-                <li class="list_item">Email: ${engineerData.getEmail()}</li>
+                <li class="list_item">Email: <a href="mailto:${engineerData.getEmail()}">${engineerData.getEmail()}</a>></a></li>
                 <li class="list_item">Github: <a href="https://www.github.com/${engineerData.getGithub()}" target="_blank">www.github.com/${engineerData.getGithub()}</a></li>
+            </ul>
+        </div>
+    </div>
+    `
+}
+
+// Intern card
+const intern = internData => {
+    return `
+    <div id=${internData.getRole()}-card" class="employee_display">
+        <div class="box position_title intern_name">
+            <h2>${internData.getName()}</h2>
+            <h3>Role: ${internData.getRole()}</h3>
+        </div>
+        <div class="box employee_info">
+            <ul class="list">
+                <li class="list_item">ID: ${internData.getId()}</li>
+                <li class="list_item">Email: <a href="mailto:${internData.getEmail()}">${internData.getEmail()}</a>></a></li>
+                <li class="list_item">Office Number: ${internData.getSchool()}</li>
             </ul>
         </div>
     </div>
