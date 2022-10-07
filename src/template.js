@@ -65,7 +65,7 @@ const engineer = engineerData => {
 // Intern card
 const intern = internData => {
     return `
-    <div id=${internData.getRole()}-card" class="employee_display">
+    <div id="${internData.getRole()}-card" class="employee_display">
         <div class="box position_title intern_name">
             <h2>${internData.getName()}</h2>
             <h3>Role: ${internData.getRole()}</h3>
