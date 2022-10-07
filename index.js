@@ -53,8 +53,16 @@ const questionPrompt = () => {
             { name: 'Done', value: "done" }
         ]
     }])
-        .then(answer => {
+        .then(positionAddition => {
             // Manager's selected new job position will correspond with respective question set.
-            if (answer.employeeType === 'addEngineer') { }
+            if (positionAddition.employeeType === 'addEngineer') { promptEngineerQuestions(); };
+            if (positionAddition.employeeType === 'addIntern') { promptInternQuestions(); };
+            if (positionAddition.employeeType === 'done') {
+                // use all user inputs stored into employeeObjectArray and create an Html file.
+                let html = template(employeesObjectArray)
+                writeFile(html);
+            }
         })
 }
+
+init();
