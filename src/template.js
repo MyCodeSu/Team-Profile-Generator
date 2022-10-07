@@ -15,7 +15,7 @@ const template = data => {
                                     <div class = "flex box justify-center bg-pink-700 text-white text-lg py-7 team">
                                         <h1>My Team</h1>
                                     </div>
-                                    <employee_container my-10 flex-auto">
+                                    <main class="employee_container my-10 grid grid-cols-3 gap-4 place-self-auto">
                                     ${employeeContainer(data)}
                                     </main>
                                 </header>
@@ -26,7 +26,7 @@ const template = data => {
 // Manager card
 const manager = managerData => {
     return `
-    <div id="${managerData.getRole()}-card" class="employee_display w-1/3 border shadow-2xl shadow-black-200">
+    <div id="${managerData.getRole()}-card" class="employee_display border shadow-2xl shadow-black-200">
         <div class="box position_title manager_name bg-blue-700 text-white py-3 px-2.5">
             <h2 class="text-2xl font-medium">${managerData.getName()}</h2>
             <h3>Role: ${managerData.getRole()}</h3>
@@ -45,7 +45,7 @@ const manager = managerData => {
 // Engineer card
 const engineer = engineerData => {
     return `
-    <div id="${engineerData.getRole()}-card" class="employee_display w-1/3 border shadow-2xl shadow-black-200">
+    <div id="${engineerData.getRole()}-card" class="employee_display border shadow-2xl shadow-black-200">
         <div class="box position_title manager_name bg-blue-700 text-white py-3 px-2.5">
             <h2 class="text-2xl font-medium">${engineerData.getName()}</h2>
             <h3>Role: ${engineerData.getRole()}</h3>
@@ -53,7 +53,7 @@ const engineer = engineerData => {
         <div class="box employee_info px-2.5 bg-gray-200 py-3">
             <ul class="list">
                 <li class="list_item bg-white border">ID: ${engineerData.getId()}</li>
-                <li class="list_item bg-white border">Email: <a class="text-blue-600"  href="mailto:${engineerData.getEmail()}">${engineerData.getEmail()}</a>></a></li>
+                <li class="list_item bg-white border">Email: <a class="text-blue-600"  href="mailto:${engineerData.getEmail()}">${engineerData.getEmail()}</a></li>
                 <li class="list_item bg-white border">Github: <a class="text-blue-600"  href="https://www.github.com/${engineerData.getGithub()}" target="_blank">www.github.com/${engineerData.getGithub()}</a></li>
             </ul>
         </div>
@@ -64,7 +64,7 @@ const engineer = engineerData => {
 // Intern card
 const intern = internData => {
     return `
-    <div id="${internData.getRole()}-card" class="employee_display w-1/3 border shadow-2xl shadow-black-200">
+    <div id="${internData.getRole()}-card" class="employee_display border shadow-2xl shadow-black-200">
         <div class="box position_title manager_name bg-blue-700 text-white py-3 px-2.5">
             <h2 class="text-2xl font-medium">${internData.getName()}</h2>
             <h3>Role: ${internData.getRole()}</h3>
@@ -72,7 +72,7 @@ const intern = internData => {
         <div class="box employee_info px-2.5 bg-gray-200 py-3">
             <ul class="list">
                 <li class="list_item bg-white border">ID: ${internData.getId()}</li>
-                <li class="list_item bg-white border">Email: <a class="text-blue-600"  href="mailto:${internData.getEmail()}">${internData.getEmail()}</a>></a></li>
+                <li class="list_item bg-white border">Email: <a class="text-blue-600"  href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
                 <li class="list_item bg-white border">Office Number: ${internData.getSchool()}</li>
             </ul>
         </div>
