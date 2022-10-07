@@ -43,7 +43,7 @@ const promptInternQuestions = () => {
 
 // prompts handler
 const questionPrompt = () => {
-    inquirer.createPromptModule([{
+    inquirer.prompt([{
         type: "list",
         name: 'employeeType',
         message: "What job position would you like to add?",

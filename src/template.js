@@ -1,7 +1,7 @@
 // boiler plate
 const template = data => {
     return `
-        < !DOCTYPE html >
+        <!DOCTYPE html>
             <html lang="en">
                 <head>
                     <meta charset="UTF-8">
@@ -16,6 +16,9 @@ const template = data => {
                                     <div class = "flex box justify-center team">
                                         <h1>My Team</h1>
                                     </div>
+                                    <main class="employee_container">
+                                    ${employeeContainer(data)}
+                                    </main>
                                 </header>
                             </body>
                         </html>`
