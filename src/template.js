@@ -9,7 +9,7 @@ const template = data => {
                             <meta name="viewport" content="width=device-width, initial-scale=1.0">
                                 <title>Team Composition</title>
                                 <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-
+                                <link href="./src/style.css" rel="stylesheet">
                             </head>
                             <body>
                                 <header class="container">
@@ -27,7 +27,7 @@ const template = data => {
 // Manager card
 const manager = managerData => {
     return `
-    <div id=${managerData.getRole()}-card" class="employee_display">
+    <div id="${managerData.getRole()}-card" class="employee_display">
         <div class="box position_title manager_name">
             <h2>${managerData.getName()}</h2>
             <h3>Role: ${managerData.getRole()}</h3>
@@ -46,7 +46,7 @@ const manager = managerData => {
 // Engineer card
 const engineer = engineerData => {
     return `
-    <div id="${engineerData.getRole()}-card" class="employee_display>
+    <div id="${engineerData.getRole()}-card" class="employee_display">
         <div class="box position_title engineer_name">
             <h2>${engineerData.getName()}</h2>
             <h3>Role: ${engineerData.getRole()}</h3>
