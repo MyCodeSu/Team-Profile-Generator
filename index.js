@@ -5,7 +5,7 @@ const writeFile = require('./src/write-file');
 // requiring constructor classes and question objects to each class
 const { Manager, managerQuestions } = require('./lib/Manager.js');
 const { Engineer, engineerQuestions } = require('./lib/Engineer.js');
-const { Intern, internQuestions } = require('lib/Intern.js');
+const { Intern, internQuestions } = require('./lib/Intern.js');
 // Array to be used for file creation
 let employeesObjectArray = [];
 
