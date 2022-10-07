@@ -1,5 +1,5 @@
 // boiler plate
-const boilerPlate = data => {
+const template = data => {
     return `
         < !DOCTYPE html >
             <html lang="en">
@@ -77,3 +77,20 @@ const intern = internData => {
     </div>
     `
 }
+
+// create cards from employeeObjectArray
+const employeeContainer = employeeObjectArray => {
+    let newEmployeeCard = ''
+
+    for (i = 0; i < employeeObjectArray.length; i++) {
+        if (employeeObjectArray[i].getRole() === "Manager") {
+            newEmployeeCard += manager(employeeObjectArray[i])
+        } else if (employeeObjectArray[i].getRole() === "Engineer") {
+            newEmployeeCard += engineer(employeeObjectArray[i])
+        } else if (employeeObjectArray[i].getRole() === "Intern") {
+            newEmployeeCard += intern(employeeObjectArray[i])
+        }
+    } return newEmployeeCard
+}
+
+module.exports = template;
