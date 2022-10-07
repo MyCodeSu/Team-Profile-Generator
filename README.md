@@ -8,8 +8,9 @@ Dynamically generated team profile that takes user inputs based on a series of q
 
 <img src="./src/Screen Shot 2022-10-07 at 1.59.16 AM.png" alt="screenshot of Michael's team profile generator app">
 
-### Deployed Link
+### Link to Recorded Walk through
 
+https://drive.google.com/file/d/1T5ETM5fFHSe73PH7-9UK-8NyJp1gtbQV/view?usp=sharing
 
 ### License
 
