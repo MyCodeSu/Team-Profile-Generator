@@ -73,7 +73,7 @@ const intern = internData => {
             <ul class="list">
                 <li class="list_item bg-white border">ID: ${internData.getId()}</li>
                 <li class="list_item bg-white border">Email: <a class="text-blue-600"  href="mailto:${internData.getEmail()}">${internData.getEmail()}</a></li>
-                <li class="list_item bg-white border">Office Number: ${internData.getSchool()}</li>
+                <li class="list_item bg-white border">School Name: ${internData.getSchool()}</li>
             </ul>
         </div>
     </div>
